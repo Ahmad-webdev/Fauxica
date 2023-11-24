@@ -1,0 +1,254 @@
+html{
+   font-size: 62.2%;
+}
+
+body{
+   margin: 0;
+   font-family: 'Poppins';
+}
+
+.wrapper{
+   max-width: 1200px;
+   margin: 0 auto;
+}
+
+                                                      /*Navbar*/
+header{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+nav{
+   margin: 4em;
+}
+
+nav ul{
+   list-style-type: none;
+   display: flex;
+   gap: 4.1em;
+   margin: 0;
+}
+
+nav ul li a{
+   text-decoration: none;
+   color: black;
+   text-transform: uppercase;
+   font-size: 1.6rem;
+   position: relative;
+
+}
+
+nav ul li a.active:before{
+   position: absolute;
+   content:"";
+   width: 35%;
+   height: 1px;
+   border-bottom:2px solid black ;
+   bottom: -6px;
+
+}
+nav ul li a:before{
+   position: absolute;
+   content:"";
+   width: 0%;
+   height: 1px;
+   border-bottom:2px solid black ;
+   bottom: -6px;
+   transition: .3s;
+}
+
+
+                                                /*Hero Section*/
+
+main{
+   display: flex;
+   gap: 13.6em;
+   margin-top: 11em;
+}
+
+.Left-col{
+   width: 45%;
+}
+
+.Right-col{
+   flex-grow: 1;
+   width: 45%;
+}
+
+h1{
+   font-size: 5.2rem;
+   font-family: 'Playfair';
+   font-weight: normal;
+}
+
+.subhead{
+
+   font-size: 1.8rem;
+
+}
+.CTA{
+   margin: 5em 0;
+}
+.CTA,.secondary-cta{
+   display: flex;
+   gap: 2em;
+}
+
+.primary-cta{
+   background-color: #F2F0DF;
+   border-radius: 1.9em;
+   font-size: 1.8rem;
+   text-decoration: none;
+   font-weight: bold;
+   color: black;
+   padding: 1em 2em;
+}
+
+
+.secondary-cta{
+   text-decoration: none;
+   color: black;
+   font-size: 1.8rem;
+   padding: 1em 0;
+   display: block;
+}
+
+.secondary-cta svg{
+   width: 20px;
+   
+}
+
+.news{
+   display: flex;
+   gap: 3em;
+   padding: 5em;
+   border-radius: 1.9rem;
+   border: 1px solid #000;
+   background: #FFF;
+   box-shadow: 15px 9px 30px 0px rgba(160, 160, 160, 0.25);
+   position: relative;
+   
+}
+
+.news:before{
+   position: absolute;
+   content: '';
+   background: url(../images/confetti.svg);
+   width: 114.09px;
+   height: 107.285px;
+   top: -20px;
+   left: -20px;
+}
+.follows{
+   margin: 0;
+   font-size: 3.3rem;
+   font-weight: 275;
+   line-height: 100%;
+}
+.details{     
+   font-size: 1.4rem;
+   margin: 0;
+
+}
+
+                                                /*Right coulmn Gallary*/
+
+.Right-col{
+   display: grid;
+   gap: 2.3em;
+   grid-template-columns: repeat(2,auto);
+   grid-template-areas: 
+          'left .'
+          'left .';
+ 
+}
+
+.card{
+   border-radius: 1.9em;
+   padding: 1.1em;
+   display: flex;
+   align-items: end;
+   background-size: 150%;
+}
+
+
+.card1{
+   grid-area: left;
+   background-image: url(../images/clothing1.jpg);
+   position: relative;
+}
+.card1::before{
+   position: absolute;
+   content: '';
+   background: url(../images/tag.svg) no-repeat;
+   width: 206.452px;
+   height: 158.153px;
+   top: -30px;
+   left: -50px;
+   pointer-events: none;
+}
+
+
+.card2{
+   background-image: url(../images/clothing2.jpg);
+}
+
+.card3{
+   background-image: url(../images/clothing3.jpg);
+}
+
+.card-info{
+   background: white;
+   border-radius: 1.9em;
+   padding: 2em;
+   width: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   
+}
+
+.card-info a{
+   color: #000;
+   font-size: 1.6rem;
+   font-weight: bold;
+   text-decoration: none;
+}
+ .card-info p{
+   font-size: 1.4rem;
+   margin: 0;
+}
+
+.price{
+   font-size: 1.8rem;
+}
+
+                                           /*Micro interactions*/
+nav ul li a:hover:before{
+   width: 35%;
+}
+
+.secondary-cta:hover svg{
+   transform: translateX(10px);
+   transition: .5s;
+}
+
+.primary-cta:hover{
+   background-color: rgb(233, 210, 0);
+   border-radius: 1.9em;
+   font-size: 1.8rem;
+   text-decoration: none;
+   font-weight: bold;
+   color: black;
+   padding: 1em 2em;
+   transition: .8s;
+}
+
+.card :hover{
+   grid-area: left;
+   background-image: url(../images/clothing1.jpg);
+   image-resolution: 1px;
+   position: relative;
+   transition: .5s;
+}
